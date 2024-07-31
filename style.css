@@ -31,34 +31,11 @@ body{
     box-shadow: 0 0 10px white;
     cursor: pointer;
 }
-.top a span:nth-child(1){
-    position: absolute;
-    top: 10px;
-    width: 15px;
-    height: 4px;
-    background: #000;
-    transform: rotate(-45deg);
+.top img{
+    display: block;
+    width: 25px;
+    height: auto;
 }
-.top a span:nth-child(2){
-    position: absolute;
-    top: 10px;
-    right: 0;
-    width: 15px;
-    height: 4px;
-    background: #000;
-    transform: rotate(45deg);
-}
-.top a span:nth-child(3){
-    position: absolute;
-    top: 16px;
-    left:3px;
-    width: 20px;
-    height: 3px;
-    background: #000;
-    border-radius: 3px;
-    transform: rotate(90deg);
-}
-.top a span:nth-child(2){}
 /* full website height and width  */
 .header-container{
     width: 100%;
@@ -346,7 +323,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: linear-gradient(180deg, rgba(97, 90, 90, 0.637) , rgba(34, 33, 33, 0.554));
+    background: linear-gradient(180deg, rgba(30, 29, 29, 0.637) , rgba(113, 110, 110, 0.305));
     border-radius: 30px;
     padding-top: 30px;
     margin: 40px auto;
@@ -379,16 +356,11 @@ body{
     cursor: pointer;
     border: none;
 }
-.right-img {
-    width: 400px;
-    width: auto;
-    overflow: hidden;
-}
 .right-img img{
     width: 400px;
-    height: auto;
+    height: 350px;
     border-radius: 20px;
-    transform: scale(1.4) translate(20px 20px);
+    margin-bottom: 20px;
 }
 /***** Section Tow run End Section *****/
 /***** Section thre Training Ana Exercises Start Section *****/ 
@@ -467,7 +439,7 @@ body{
 /***** Section thre Training Ana Exercises End Section *****/
 /***** Extra Section Chalenging part start here *****/ 
 .food-container{
-    width: 80%;
+    width: 90%;
     height: 500px;
     margin: auto;
     border-radius: 20px;
@@ -490,17 +462,19 @@ body{
     margin-top: 15px;
 }
 .four-food-container{
-    height: 60%;
+    width: 80%;
+    height: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin:50px auto 0px;
 }
 .food-card{
-    height: 90%;
-    margin:20px 10px 0;
+    width: 180px;
+    height: 280px;
+    margin: auto;
     background: #2b2a2a;
     border-radius: 10px;
-    transition: 0.5s ease;
+    transition: 0.7s ease;
 }
 .food-card:hover{
     transform: scale(1.1);
@@ -509,9 +483,13 @@ body{
     box-shadow: 0 0 10px white;
     background: #0000003d;
     backdrop-filter: blur(20px);
+    transition: 0.5s ease-in;
+}
+.food-card:hover img{
+    transform: scale(1.2,1.2);
+    transition: 0.5s ease-in;
 }
 .food-card img{
-    border: 1px solid red;
     display: block;
     width: 80px;
     height: 80px;
@@ -533,6 +511,7 @@ body{
     text-align: center;
     margin-top: 10px;
     line-height: 20px;
+    padding:0px 10px;
 }
 /***** Extra Section Chalenging part End Section *****/
 /***** BMI Calulator Section start here *****/
@@ -625,6 +604,7 @@ td{
     font-weight: 400;
     color: #FFFF;
     margin-top: 25px;
+    margin-left: 10px;
     letter-spacing: 0.5px;
     cursor: pointer;
     border: none;
@@ -638,27 +618,32 @@ form{
     display: flex;
     width: 100%;
 }
-.flex-input input{
+.flex-input input, #gender{
     width: 50%;
     height: 35px;
     border: none;
     background: #3d3838;
     margin: 5px;
     border-radius: 8px;
-    color: #FFFFFF;
+    color: #FFFFFF80;
+}
+#gender{
+    padding-left: 12px;
 }
 ::placeholder{
     color: #FFFFFF80;
     font-size: 12px;
     padding-left:15px;
 }
-#seclect-activity{
+#activity{
     width: 98%;
     height: 35px;
     border-radius: 8px;
     background: #3d3838;
+    color: #FFFFFF80;
     border: none;
     margin:4px 0 0 5px;
+    padding-left: 12px;
 }
 /***** BMI Calulator End Section *****/
 /***** Meet Teem Section start here *****/ 
@@ -845,8 +830,7 @@ form{
 }
 /***** footer End Section *****/
 
-
-/* Responsive media qurey start here  */
+/* Responsive media qurey for small device start here */
 @media screen and (max-width:576px) {
     .nav-menu
     {
@@ -931,18 +915,31 @@ form{
     .hero-right-content{
         margin-left: 25%;
     }
+    .hero-description{
+        line-height:25px;
+    }
     .img-card2{
         position: absolute;
         top:10%;
         left: 60%;
     }
-
+    .hero-left-content .hero-tittle{
+        font-size: 40px;
+        line-height: 1.3;
+    }
     .hero-left-content{
         margin: 80px 7%;
     }
+    /* habit qury start here  */
     .habit-flow-four-card-container{
         display: flex;
         flex-direction: column;
+        margin-top: -40px;
+    }
+    .habits-description{
+        width: 400px;
+        margin: auto;
+        line-height: 25px;
     }
     .card-habit{
         margin-top: 8%;
@@ -953,39 +950,57 @@ form{
         height: 100%;
         padding-bottom: 30px;
     }
+    .run-card-description{
+        line-height: 25px;
+    }
     .button button {
         width: 90%;
         height: 60px;
         margin-left: 3%;
     }
-    .right-img{
+    .right-img img{
+        display: block;
+        margin: 20px auto 0;
         width: 90%;
         border-radius: 10px;
-        margin-top: 20px;
     }
     /* tree traning and exerises section  */
     .traing-ex-card-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .training-description{
+        line-height: 25px;
+    }
     .card-img3, .card-img6{
         display: none;
     }
     /* extra chalenging section  */
     .food-container{
-        height: 1180px;
+        height: 1390px;
         position: relative;
+        margin-top: 50px;
     }
     .four-food-container{
         position: absolute;
-        top: 310px;
-        left: 23%;
+        top: 400px;
+        left: 12%;
         display: flex;
         flex-direction: column;
+    }
+    .food-card{
+        margin-top: 30px;
+    }
+    .food-details{
+        padding-bottom: 10px;
     }
     /* BMI Calculator section  */
     .bmi-header{
         margin-left:0px;
+    }
+    .bmi-description{
+        width: 100%;
+        line-height: 25px;
     }
     .bmi-calcu-container{
         height:840px;
@@ -1026,13 +1041,18 @@ form{
         display: flex;
         width: 100%;
     }
+    #gender{
+        width: 24%;
+        height:55px;
+        margin: 10px 0 0 10px;
+    }
     .flex-input input{
         display: block;
         width: 24%;
         height: 55px;
         margin: 10px;
     }
-    #seclect-activity{
+    #activity{
         width: 50.50%;
         height: 55px;
         margin: 10px;
@@ -1075,6 +1095,10 @@ form{
         position: absolute;
         left: 30px;
         top: 30px;
+    }
+    .left-footer-description{
+        width: 420px;
+        line-height: 25px;
     }
     .left-footer-logo{
         font-size: 90px;
@@ -1165,7 +1189,7 @@ form{
     }
     /* extra section css here  */
     .food-container{
-        height: 1450px;
+        height: 1360px;
     }
     .food-tittle{
         font-size: 30px;
@@ -1173,13 +1197,12 @@ form{
     .four-food-container{
         display: flex;
         flex-direction: column;
-        margin-top:250px;
+        margin-top:260px;
     }
     .food-card{
-        border: 1px solid red;
         width: 200px;
         height: 500px;
-        margin: 30px 0px;
+        margin: 30px 0px 0px 30%;
         padding: 20px 0;
     }
     /* bmi calculetor css start here  */
@@ -1235,6 +1258,23 @@ form{
         height: 50px;
         font-size: 20px;
         margin-left: 15px;
+    }
+    /* extra section  */
+    .four-food-container{
+
+    }
+    .food-card{
+    }
+    /* run section css start here */
+    .run-card-container{
+        height: 500px;
+    }
+    .button button{
+        width: 250px;
+        height: 70px;
+    }
+    .right-img img{
+        width: 90%;
     }
     /* footer section css start here  */
     .footer-main-container{
